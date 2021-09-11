@@ -1,9 +1,29 @@
 @import "general";
 
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  font-family: "Space Mono", monospace;
+  background-color: var(--background-color);
+  color: var(--primary-color);
+}
+
 .container {
   max-width: 730px;
   margin: 96px auto;
   padding: 15px;
+  @media (max-width: $media-tablet) {
+    max-width: 603px;
+    padding: 15px;
+  }
+  @media (max-width: $media-mobile) {
+    max-width: 405px;
+  }
 }
 
 .btn_primary {
@@ -25,7 +45,7 @@
   &:hover {
     background-color: hsl(212, 100%, 69%);
   }
-  @media screen and (max-width: --var(media-mobile)) {
+  @media (max-width: $media-mobile) {
     padding: 12px 16px;
   }
 }
@@ -60,7 +80,7 @@
     &::placeholder {
       color: var(--secondary-color);
     }
-    @media screen and (max-width: --var(media-mobile)) {
+    @media (max-width: $media-mobile) {
       font-size: 13px;
       padding: 12px 0;
     }
@@ -69,4 +89,184 @@
   label {
     margin: 0 12px;
   }
+  .search_icon {
+    transform: translateY(3px);
+  }
+}
+
+.profile {
+  min-height: 419px;
+  display: grid;
+  grid-template-columns: 20fr 80fr;
+  background-color: var(--background-color-alt);
+  border-radius: 11px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  @media (max-width: $media-tablet) {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+  }
+}
+
+.image_container {
+  width: 100%;
+  text-align: center;
+  padding-top: 32px;
+  @media (max-width: $media-tablet) {
+    position: absolute;
+  }
+}
+
+.avatar {
+  height: 117px;
+  border-radius: 50%;
+  /* ALIGN IMAGE */
+  margin-left: 32px;
+  margin-top: 8px;
+  @media (max-width: $media-tablet) {
+    position: absolute;
+    top: 24px;
+    left: 0;
+  }
+  @media (max-width: $media-mobile) {
+    height: 70px;
+  }
+}
+
+.profile_information {
+  padding: 32px;
+  position: relative;
+}
+
+.profile_header {
+  width: 98%;
+  @media (max-width: $media-tablet) {
+    width: 100%;
+    transform: translateX(30%);
+  }
+}
+
+.profile_joined_date {
+  position: absolute;
+  top: 10%;
+  right: 8%;
+  font-size: 15px;
+  color: var(--secondary-color);
+  @media (max-width: $media-tablet) {
+    position: static;
+    margin-bottom: 42px;
+  }
+  @media (max-width: $media-mobile) {
+    font-size: 13px;
+  }
+}
+
+.profile_name {
+  font-size: 26px;
+  @media (max-width: $media-mobile) {
+    font-size: 16px;
+  }
+}
+
+.profile_login {
+  font-size: 16px;
+  font-weight: normal;
+  color: hsl(212, 100%, 50%);
+  margin-bottom: 24px;
+  @media (max-width: $media-tablet) {
+    margin-bottom: 8px;
+    margin-right: 96px;
+  }
+  @media (max-width: $media-mobile) {
+    font-size: 13px;
+  }
+}
+
+.profile_bio {
+  font-size: 15px;
+  color: var(--secondary-color);
+  margin-bottom: 32px;
+  text-align: left;
+  @media (max-width: $media-tablet) {
+    transform: translateX(-30%);
+  }
+  @media (max-width: $media-mobile) {
+    font-size: 13px;
+    line-height: 1.9;
+  }
+}
+
+.stats_container {
+  width: 98%;
+  background-color: var(--background-color);
+  display: flex;
+  gap: 25%;
+  padding: 16px 32px;
+  border-radius: 11px;
+  margin-bottom: 32px;
+  @media (max-width: $media-tablet) {
+    width: 100%;
+    gap: 20%;
+  }
+  @media (max-width: $media-mobile) {
+    gap: 15%;
+  }
+}
+
+.stat_box .stat_heading {
+  font-size: 14px;
+  font-weight: normal;
+  color: var(--tertiary-color);
+  @media (max-width: $media-mobile) {
+    font-size: 12px;
+  }
+}
+
+.stat_box span {
+  font-size: 20px;
+  font-weight: bold;
+  @media (max-width: $media-mobile) {
+    font-size: 16px;
+  }
+}
+
+.social_links {
+  width: 98%;
+  display: flex;
+  flex-wrap: wrap;
+  @media (max-width: $media-mobile) {
+    flex-direction: column;
+  }
+}
+
+.li {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  color: var(--tertiary-color);
+  @media (max-width: $media-mobile) {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 20px 1fr;
+  }
+}
+
+.li_icon {
+  fill: hsl(0, 0%, 100%);
+}
+
+.li_text {
+  font-size: 14px;
+  text-decoration: none;
+  color: inherit;
+  @media (max-width: $media-mobile) {
+    font-size: 13px;
+  }
+}
+
+.twitter_username:hover,
+.blog:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }

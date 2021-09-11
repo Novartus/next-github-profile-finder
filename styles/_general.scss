@@ -1,6 +1,5 @@
 :root {
   --background-color: hsl(219, 39%, 13%);
-  --background-color: hsl(227, 100%, 98%);
   --background-color-alt: hsl(222, 41%, 20%);
   --primary-color: hsl(0, 0%, 100%);
   --secondary-color: hsl(0, 0%, 100%);
@@ -8,6 +7,6 @@
   --gray-color: hsl(0, 0%, 75%);
 }
 
-$media-tablet: 768px;
 $media-mobile: 576px;
+$media-tablet: 768px;
 $media-desktop: 1150px;
