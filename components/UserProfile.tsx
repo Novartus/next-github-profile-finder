@@ -30,7 +30,7 @@ function UserProfile({
       <main className="profile">
         <div className="image_container">
           <Image
-            src="/assets/icons/profile.svg"
+            src="/assets/images/octocat.png"
             alt="Avatar"
             className="avatar"
             height="80"
@@ -41,9 +41,9 @@ function UserProfile({
         <div className="profile_information">
           <div className="profile_header">
             <h1 className="profile_name">{name}</h1>
-            <h2 className="profile_login">@{github_id}</h2>
+            <h3 className="profile_login">@{github_id}</h3>
             <p className="profile_joined_date">Joined {join_date}</p>
-            <p className="profile_bio">{bio}</p>
+            <h2 className="profile_bio">{bio}</h2>
           </div>
 
           <div className="stats_container">
@@ -67,8 +67,8 @@ function UserProfile({
                 src="/assets/icons/location.svg"
                 alt="location icon"
                 className="li_icon"
-                height="20"
-                width="14"
+                height="10"
+                width="07"
               />
               <span className="li_text location">{location}</span>
             </li>
@@ -77,7 +77,7 @@ function UserProfile({
                 src="/assets/icons/twitter.svg"
                 alt="location icon"
                 className="li_icon"
-                height="20"
+                height="18"
                 width="20"
               />
               <a
