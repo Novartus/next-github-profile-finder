@@ -51,6 +51,20 @@ const Home: NextPage = () => {
       <Meta />
 
       <div className="container">
+        <header className="header">
+          <div className="app_title">GitHub Profile Finder</div>
+
+          <div>
+            By{" "}
+            <a
+              href="https://novartus.github.io/"
+              target="_blank"
+              className="author_name"
+            >
+              Novartus
+            </a>
+          </div>
+        </header>
         <form className="search_bar" onSubmit={(e) => handleProfileSearch(e)}>
           <input
             id="search_input"
